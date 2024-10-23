@@ -1,0 +1,11 @@
+{
+    "pinMapping": {
+        "buzzer": ["PIN_PB5"],
+        "motorLeft1": ["PD6"],
+        "motorLeft2": ["PD7"],
+        "motorLeftSpeed": ["PB6"],
+        "motorRight1": ["PG1"],
+        "motorRight2": ["PG0"],
+        "motorRightSpeed": ["PB7"]
+    }
+}

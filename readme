@@ -1,0 +1,34 @@
+void loop()
+{
+  /// do write a code here
+  driveControl.drive_to_checkpoint();
+  driveControl.drive_to_checkpoint();
+  driveControl.drive_to_checkpoint();
+  driveControl.dash_to_the_front(300);
+  driveControl.drive_to_checkpoint();
+
+  // center
+  driveControl.drive_to_checkpoint();
+  driveControl.drive_to_checkpoint();
+
+  driveControl.do_turn_left_45();
+  driveControl.dash_to_the_front(300);
+  driveControl.drive_to_checkpoint();
+
+  while (true)
+  {
+  }
+}
+
+
+
+
+#define PID_KP 7
+#define PID_KD 2
+#define DEFAULT_SPEED 36
+#define MAX_SPEED 50
+
+#define PID_KI 0
+
+#define SENSOR_T_INTERSECTION_VALUE -8
+#define SENSOR_ALL_WHITE_VALUE -9
