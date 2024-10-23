@@ -40,6 +40,7 @@ public:
     void drive_to_checkpoint(int additionalDriveTime);
     void go_to_the_front(int duration);
     void dash(int dashTime);
+    void dash_reverse(int dashTime);
     void drive_to_checkpoint(void);
     void find_left_corner(void);
     void find_right_corner(void);

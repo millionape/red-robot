@@ -186,6 +186,27 @@ void DriveControl::dash(int dashTime)
     delay(150);
 }
 
+/**
+ * @brief คำสั่งเพื่อให้หุ่นถอยหลังเป็นเวลามิลลิวินาที โดยไม่สนใจเส้นดำ
+ * @details 1วินาที เท่ากับ 1000 มิลลิวินาที
+ * @param dashTime เวลาในหน่วยมิลลิวินาที
+ */
+void DriveControl::dash_reverse(int dashTime)
+{
+    // do 2seconds timeout
+    unsigned long startTime = millis();
+    while (millis() - startTime < dashTime)
+    {
+
+        motorInstance.leftMotorCommand(defaultSpeed, false);
+        motorInstance.rightMotorCommand(defaultSpeed, false);
+        delay(1);
+    }
+
+    motorInstance.stopMotorsWithBreak(true, 40, 40);
+    delay(150);
+}
+
 void DriveControl::correct_center(int speed)
 {
 
